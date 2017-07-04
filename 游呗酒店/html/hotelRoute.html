@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <meta name="Generator" content="Sublime Text3">
+    <meta name="Author" content="中山卉子">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1.0,minimum-scale=1.0,user-scalsble=no">
+    <link rel="stylesheet" type="text/css" href="../css/topCom.css">
+    <link rel="stylesheet" type="text/css" href="../css/hotelRoute.css">
+    <script type="text/javascript" src="../js/jquery-3.1.1.min.js"></script>
+    <script type="text/javascript" src="../js/yCom.js"></script>
+</head>
+<body>
+    <div class="y_Box">
+    	<!-- 顶部标题开始 -->
+	    <div class="y_top">
+	      <a href="" id="back">
+	    	<div class="y_back"><span class="arrow"></span><span class="arrow green"></span></div></a>酒店路线
+	    </div><!-- 顶部标题结束 -->
+	    <div class="luxian" id="luxian">
+	    	
+	    </div>
+    </div>
+</body>
+
+<script type="text/javascript">
+    $.get('../json/hotelRoute.json',function(data) {
+    	data=JSON.parse(data);
+ // console.log(data)
+	var dataArry = [];
+	dataArry = data.data.list;
+	var luxian = $("#luxian");
+	// console.log(luxian);
+	creatCell(dataArry)
+	 })
+    // 动态创建ui
+    function creatCell(dataArry)
+	{
+		luxian.innerHTML = "";
+		for (var i = 0; i < dataArry.length; i++) 
+		{
+			var allbox = document.createElement("div");
+			allbox.className = "allbox";
+			luxian.appendChild(allbox);
+
+            var imgBox = document.createElement("div");
+            imgBox.className = "imgBox";
+            allbox.appendChild(imgBox);
+			var firstImg = document.createElement("img");
+			firstImg.className="firstImg";
+			firstImg.src = dataArry[i].imgSort;
+			imgBox.appendChild(firstImg);
+
+            var sum=0, num=0;
+            var routeDet = dataArry[i].sort[0].detial;
+            for (var j = 0; j < routeDet.length; j++) 
+            {
+            	var supDiv = document.createElement("div");
+			    supDiv.className = "supDiv";
+			    allbox.appendChild(supDiv);
+			    sum=routeDet.length;
+			    if (routeDet.length<=1) 
+			    	{
+			    		num=routeDet.length*2;
+			    	}else{
+			    		num=routeDet.length;
+			    	}
+			    supDiv.style.height = num*5.5+"rem";
+			    imgBox.style.height=sum*5.5*2+"rem";
+
+			    var nameDiv = document.createElement("div");
+			    nameDiv.className = "nameDiv";
+			    nameDiv.innerHTML = routeDet[j].name;
+			    supDiv.appendChild(nameDiv);
+
+			    var disDiv = document.createElement("div");
+			    disDiv.className = "disDiv";
+			    disDiv.innerHTML = routeDet[j].m_d;
+			    supDiv.appendChild(disDiv);
+
+			    var aDiv = document.createElement("div");
+			    aDiv.className = "aDiv";
+			    aDiv.innerHTML = "<a href='' class='aRoute'>路线</a>";
+			    supDiv.appendChild(aDiv);
+            };
+		};
+	}
+</script>
+</html>
