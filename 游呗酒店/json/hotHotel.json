@@ -1,0 +1,109 @@
+{   
+    "uid":25895,
+    "tnum":3,
+    "pnum":1,
+    "codeComment":"0", 
+	"code":"200",
+	"data":{
+		"items":[{
+			"img":"../img/find_image_hotel@2x (21).png",
+			"title":"丽江半溪草堂",
+			"pinjia":"1379",
+			"tiji":"17",
+			"local":"位于丽江 古城区",
+			"pri":"￥145",
+			"num":"上月销售量第一",
+			"id":2145
+			},
+			{
+			"img":"../img/find_image_hotel@2x (22).png",
+			"title":"花筑.丽江古城听花堂",
+			"pinjia":"1269",
+			"tiji":"13",
+			"local":"位于丽江 古城区",
+			"pri":"￥990",
+			"num":"上月销售量第二",
+			"id":2163
+			},
+			{
+			"img":"../img/find_image_hotel@2x (23).png",
+			"title":"丽江东河客栈",
+			"pinjia":"1487",
+			"tiji":"17",
+			"local":"位于丽江 古城区",
+			"pri":"￥2416",
+			"num":"上月销售量第三",
+			"id":2185
+			},
+			{
+			"img":"../img/find_image_hotel@2x (24).png",
+			"title":"爱艾尚高级私人客栈",
+			"pinjia":"4349",
+			"tiji":"13",
+			"local":"位于丽江 古城区",
+			"pri":"￥337",
+			"num":"上月销售量第四",
+			"id":2174
+			},
+			{
+			"img":"../img/find_image_hotel@2x (25).png",
+			"title":"平遥游多多客栈",
+			"pinjia":"2109",
+			"tiji":"14",
+			"local":"位于丽江 古城区",
+			"pri":"￥855",
+			"num":"上月销售量第五",
+			"id":2163
+			},
+			{
+			"img":"../img/find_image_hotel@2x (19).png",
+			"title":"杭州良渚君澜度假酒店",
+			"pinjia":"1739",
+			"tiji":"19",
+			"local":"杭州 余杭区",
+			"pri":"￥623",
+			"num":"上月销售量第六",
+			"id":9645
+			},
+			{
+			"img":"../img/find_image_hotel@2x (26).png",
+			"title":"苏州桃园国际度假酒店",
+			"pinjia":"1329",
+			"tiji":"12",
+			"local":"苏州 虎丘区",
+			"pri":"￥389",
+			"num":"上月销售量第七",
+			"id":2184
+			},
+			{
+			"img":"../img/find_image_hotel@2x (17).png",
+			"title":"沈园.同里精品会所酒店",
+			"pinjia":"1109",
+			"tiji":"16",
+			"local":"苏州 吴江区",
+			"pri":"￥479",
+			"num":"上月销售量第八",
+			"id":2634
+			},
+			{
+			"img":"../img/find_image_hotel@2x (20).png",
+			"title":"三亚蜈支洲珊瑚酒店",
+			"pinjia":"1219",
+			"tiji":"16",
+			"local":"三亚 海棠区",
+			"pri":"￥558",
+			"num":"上月销售量第九",
+			"id":5412
+			},
+			{
+			"img":"../img/find_image_hotel@2x (18).png",
+			"title":"杭州温德姆至尊豪廷大酒店",
+			"pinjia":"1109",
+			"tiji":"16",
+			"local":"杭州 下城区",
+			"pri":"￥958",
+			"num":"上月销售量第十",
+			"id":3652
+			}]
+	}
+}

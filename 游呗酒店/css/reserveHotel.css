@@ -1,0 +1,212 @@
+*{
+	padding: 0;
+	margin: 0;
+}
+/*酒店精选头部部分=====================*/
+.jinxuan{
+	height: 5.5rem;
+	border-bottom: 1px solid #999999;
+}
+.jinxuan p:nth-child(1){
+	margin: 1.0625rem 0 1.0625rem 0.844rem;
+	font-size: 0.9375rem;
+	color: #494949;
+	font-weight: bolder;
+}
+.jinxuan p:nth-child(2){
+	margin-left:0.844rem;
+	font-size: 0.75rem;
+	color: #999999;
+	font-weight: bolder;
+}
+.jinxuan p:nth-child(3){
+	margin: 0.8125rem 0 0.875rem 0.844rem;
+	font-size: 0.75rem;
+	color: #999999;
+	font-weight: bolder;
+}
+.action{
+	height: 1.9375rem;
+}
+.action p{
+	margin: 0rem 0 0rem 0.844rem;
+	height: 1.125rem;
+	font-size: 0.75rem;
+	color: #548DD2;
+	font-weight: bold;
+}
+.action p img{
+	vertical-align: middle;
+	width: 1.125rem;
+	height: 1.125rem;
+}
+.action p span{
+	display: inline-block;
+	margin-top: 0.65rem;
+}
+.clear{
+	height: 0.5rem;
+	background-color: #EFEFEF;
+	clear: both;
+}
+/*预定表单部分开始========================================*/
+form ul li{
+	height: 2.75rem;
+	border-bottom: 1px solid #999999;
+	font-size: 0.9375rem;
+	color: #999999;
+	font-weight: bold;
+}
+form ul li div{
+	height: 2.75rem;
+	margin-left: 0.844rem;
+	box-sizing: border-box;
+	position: relative;
+}
+form ul li div input{
+	height: 2.2rem;
+	width: 11.6875rem;
+	font-size: 0.9375rem;
+	color: #494949;
+	margin-left: 1rem;
+	margin-top: 0.3rem;
+	box-sizing: border-box;
+	outline: none;
+	border: none;
+}
+form ul li div input.toright{
+	margin-left: 1.94rem;
+	border-right: 1px solid #999999;
+}
+form ul li div input.ttoright{
+	margin-left: 1.5rem;
+}
+form ul li div img{
+	width: 1.375rem;
+	height: 1.375rem;
+	position: absolute;
+	top: 0.75rem;
+	right: 1.2rem;
+}
+.clear{
+	border: none;
+}
+form ul li:nth-child(4){
+	border-bottom: none;
+}
+form ul li div input.tttoright{
+	margin-left: 0.1rem;
+	border-right: 1px solid #999999;
+}
+form ul li:nth-child(6){
+	border-bottom: none;
+}
+::-webkit-input-placeholder{
+	color: #494949;
+}
+form ul li:nth-child(8){
+	position: relative;
+	border-bottom: none;
+}
+form ul li:nth-child(8) div{
+	margin-left: 3.3rem;
+}
+form ul li:nth-child(8) div input{
+	height: 2.2rem;
+	width: 6rem;
+	position: relative;
+	left: 8rem;
+}
+form ul li:nth-child(8) div ::-webkit-input-placeholder{
+	color: #DF7055;
+}
+form ul li:nth-child(8) span{
+	display: inline-block;
+	width: 2.5375rem;
+	height: 1rem;
+	border: 1px solid #999999;
+	font-size: 0.5rem;
+	color :#548DD2;
+	text-align: center;
+	line-height: 1rem;
+	position: absolute;
+	top: 0.8rem;
+	left: 0.75rem;
+}
+form ul li:nth-child(10){
+	border-bottom: none;
+}
+form ul li:nth-child(10) div{
+	line-height: 2.8rem;
+	position: relative;
+}
+form ul li:nth-child(10) div input{
+	width: 1rem;
+	height: 1rem;
+	position: absolute;
+	right: 2.8rem;
+	top: 0.75rem;
+}
+form ul li:nth-child(11){
+	height: 5.1875rem;
+	border-bottom: 1px solid #999999;
+}
+form ul li:nth-child(12){
+	border-bottom: none;
+	font-size: 1.125rem;
+	color: #DF7055;
+}
+form ul li:nth-child(12) div{
+	position: relative;
+	line-height: 3.0625rem;
+}
+form ul li:nth-child(12) div input{
+	position: absolute;
+    width: 7.25rem;
+    height: 3.0625rem;
+    margin: 0;
+    right: 0;
+    font-size: 1.125rem;
+    color: #FFFFFF;
+    background: #548DD2;
+}
+/*预定表单部分结束============================================*/
+/*预定成功蒙版部分开始=======================================*/
+.mengbanbox{
+	position: absolute;
+	width: 100%;
+	z-index: 10;
+	display: none;
+}
+.mengban{
+	background-color: #cecece;
+}
+#mbImg{
+	width: 9rem;
+	height: 9rem;
+	background: #548DD2;
+	position: absolute;
+	top:0;
+	left: 0;
+	right: 0;
+	bottom: 0rem;
+	margin: auto;
+	z-index: 14;
+}
+#mbImg img{
+	width: 3.71875rem;
+	height: 6.5rem;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 2rem;
+	margin: auto;
+}
+#mbImg span{
+	position: absolute;
+	bottom: 0.625rem;
+	left: 2.5rem;
+	color: #FFFFFF;
+}
+/*预定成功蒙版部分结束==========================================*/

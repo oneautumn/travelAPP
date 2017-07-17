@@ -1,0 +1,106 @@
+*{
+	padding: 0;
+	margin: 0;
+}
+li{
+	list-style-type: none;
+	overflow: hidden;
+}
+
+a{
+	text-decoration: none;
+}
+.left{
+	float: left;
+}
+#app li{
+	border-bottom: 1px solid gray;
+	padding: 1.125rem 0px 1.75rem 0.75rem;
+	position: relative;
+}
+#app li a img{
+	width: 6.25rem;
+	padding-right: 1.125rem;
+}
+#app li h1{
+    color: #494949;
+    font-size: 1rem;
+}
+#app li .pinjia{
+	padding: 1.875em 0 1rem 0;
+	color: #c9c9c9;
+	font-size: 0.8125rem;
+}
+#app li .pinjia span{
+	color: #548dd2;
+	font-size: 1.125rem;
+}
+#app li .addr{
+	color: #999999;
+	font-size: 0.9375rem;
+	position: relative;
+}
+#app li .addr .priqi{
+	display: inline-block;
+	position: absolute;
+	right: 0.75rem;
+	font-size: 0.5625rem;
+}
+#app li .addr .priqi .pri{
+	font-size: 1.125rem;
+	color: #df7055;
+}
+#app li .num{
+	display: block;
+	width: 5.875rem;
+	height: 1.25rem;
+	border-radius: 0.2rem 0.2rem 0.2rem 0.2rem;
+	text-align: center;
+	line-height: 1.25rem;
+	background-color: #548dd2;
+	color: #fefefe;
+	font-size: 0.75rem;
+	position: absolute;
+	right: 0.75rem;
+	bottom: 0.25rem;
+}
+
+
+/*.wating-tip{
+	width: 100%;
+	height: 5.5em;
+	background: #ededed;
+	display: none;
+	font-size: 16px;
+	position: relative;
+}
+.none{
+	width: 15em;
+	height: 100%;
+	position: absolute;
+	left: 0;
+	right:0;
+	top: 0;
+	bottom: 0;
+	margin: auto;
+}
+.none span:nth-child(2){
+	font-size: 1.2em;
+	font-weight: bold;
+	color: #999;
+	position: absolute;
+	top: 25px;
+	left: 50px;
+}
+.none span:last-child{
+	font-size: 1.2em;
+	font-weight: bold;
+	color: #999;
+	position: absolute;
+	top: 60px;
+	left: 50px;
+}
+.none img{
+	margin-top: 10px;
+	margin-right: 12px;
+}*/

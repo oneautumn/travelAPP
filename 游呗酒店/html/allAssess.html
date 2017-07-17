@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>全部点评</title>
+    <meta name="Generator" content="Sublime Text3">
+    <meta name="Author" content="中山卉子">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1.0, minimum-scale=1.0,user-scalsble=no">
+    <link rel="stylesheet" type="text/css" href="../css/topCom.css">
+    <link rel="stylesheet" type="text/css" href="../css/allAssess.css"/>
+    <script type="text/javascript" src="../js/jquery-3.1.1.min.js"></script>
+    <script type="text/javascript" src="../js/yCom.js"></script>
+</head> 
+<body>
+    <div class="y_Box">
+        <!-- 顶部标题开始 -->
+	    <div class="y_top">
+	      <a href="" id="back">
+	    	<div class="y_back"><span class="arrow"></span><span class="arrow green"></span></div></a>全部点评
+	    </div><!-- 顶部标题结束 -->
+	    <!--评价头部部分开始-->
+	    <div class="head">
+	    	<div class="good_left">
+	    		<span>4.8</span></br>
+	    		<span>很棒</span>
+	    	</div>
+	    	<div class="good_right">
+	    		<ul>
+	    			<li>
+	    			    <span>位置</span>
+	    			    <span></span>
+	    			    <span></span>
+	    			    <span>4.7</span>
+	    			</li>
+	    			<li>
+	    			    <span>卫生</span>
+	    			    <span></span>
+	    			    <span></span>
+	    			    <span>4.8</span>
+	    			</li>
+	    			<li>
+	    			    <span>服务</span>
+	    			    <span></span>
+	    			    <span></span>
+	    			    <span>4.8</span>
+	    			</li>
+	    			<li>
+	    			    <span>性价比</span>
+	    			    <span></span>
+	    			    <span></span>
+	    			    <span>4.7</span>
+	    			</li>
+	    		</ul>
+	    	</div>
+	    </div><!--评价头部部分结束-->
+	    <!--评价筛选部分开始-->
+	    <div class="sort">
+	    	<ul>
+	    		<li>全部(1379)</li>
+	    		<li>推荐（369）</li>
+	    		<li>待改善（29）</li>
+	    		<li>有图（19）</li>
+	    		<li>最新发布</li>
+	    	</ul>
+	    </div><!--评价筛选部分结束-->
+	    <!--全部评价展示部分开始-->
+	    <ul id="assessApp">
+	    	<li v-for="ites in data" class="assEach">
+	    		<p class="title">
+	    			<a><img v-bind:src="ites.img" class="img-responsive"/></a>
+	    			<span>{{ites.name}}</span>
+	    		</p>
+	    		<p class="stars">
+	    			<a><img v-bind:src="ites.star" class="img-responsive"/></a>
+	    			<span>{{ites.sort}}</span>
+	    		</p>
+	    		<p class="cont">{{ites.cont}}</p>
+	    		<p class="riqi">{{ites.riqi}}</p>
+	    	</li>
+	    	<div class="wating-tip" id="wating-tip">
+            	<div class="none">
+            		<img src="../img/find_image_fail to load@2x (2).png" class="img-responsive"/>
+            		<span>没有了呦，</span></br>
+            		<span>人家是有底线的呢</span>
+            	</div>
+            </div>
+	    </ul>
+	    <script type="text/javascript" src="../js/vue.js"></script>
+	    <script>
+	    	var $watingTip = $("#wating-tip");
+	    	var vue = new Vue({
+	    		el:"#assessApp",
+	    		data:function(){
+	    			return{data:""}
+	    		},
+	    		created:function()
+	    		{
+	    			var that = this;
+	    			var xhr = new XMLHttpRequest();
+	    		xhr.onreadystatechange = function()
+	    		{
+	    			if(xhr.readyState==4)
+	    			{
+	    				var assData = JSON.parse(xhr.responseText).data.items;
+//	    				console.log(xhr.responseText);
+	    				var watTip = $("#wating-tip").slideUp();
+	    				var num = 1, each = 3;
+	    				sliData = assData.slice(0,num*each);
+	    				that.data = sliData;
+	    				
+	    				document.addEventListener("touchstart", touchstartHandler, false);
+                        document.addEventListener("touchmove", touchmoveHandler, false);
+                        document.addEventListener("touchend", touchendHandler, false);
+                        var starY;
+                        
+                        function touchstartHandler(event){
+                        	startY = event.touches[0].pageY;
+                        	starty = event.touches[0].clientY;
+                        }
+                        
+                        function touchmoveHandler(event){
+                        	nowY = event.touches[0].pageY;
+                        }
+                        
+                        function touchendHandler(event){
+                        	if(starty>300&&startY-nowY>100){
+                        		data="";
+                        		num++;
+                        		sliData = assData.slice(0,num*each);
+                        		that.data = sliData;
+                        		if((num-1)*each>=assData.length){
+                        			watTip.slideDown();
+                        			setTimeout(function(){
+                                        watTip.slideUp()    
+                                        },200);
+                        		}
+                        		var hei = $(window).height();
+                        		console.log(hei);
+                        		var scr = $(window).scrollTop();
+                        		console.log(scr)
+                        		var sum = hei+scr;
+                        		console.log(hei+scr);
+                        		$("body").animate({'scrollTop':sum},1400); 	
+                        	}
+                        }
+	    			};
+	    			
+	    		}
+	    		xhr.open("GET","../json/allAssess.json",true);
+	    		xhr.send();
+	    		}
+	    	})
+	    </script>
+    </div>
+</body>
+</html>

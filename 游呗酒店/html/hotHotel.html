@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>热门酒店</title>
+    <meta name="Generator" content="Sublime Text3">
+    <meta name="Author" content="中山卉子">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1.0, minimum-scale=1.0,user-scalsble=no">
+    <link rel="stylesheet" type="text/css" href="../css/topCom.css">
+    <link rel="stylesheet" type="text/css" href="../css/scenicHotel.css">
+    <script type="text/javascript" src="../js/jquery-3.1.1.min.js"></script>
+    <script type="text/javascript" src="../js/yCom.js"></script>
+</head>
+<body>
+	<div class="y_Box">
+    	<!-- 顶部标题开始 -->
+	    <div class="y_top">
+	      <a href="" id="back">
+	    	<div class="y_back"><span class="arrow"></span><span class="arrow green"></span></div></a>热门酒店
+	    </div><!-- 顶部标题结束 -->
+        <!-- 展示部分开始 -->
+       <ul id="app">
+            <li v-for="ite in data">
+                <a href="#"><img v-bind:src="ite.img" class="left"></a>
+                <h1>{{ite.title}}</h1>
+                <p class="pinjia">
+                    <span>{{ite.pinjia}}</span>评价,
+                    <span>{{ite.tiji}}</span>游记提及
+                </p>
+                <div class="addr">{{ite.local}}
+                	<p class="priqi">
+                		<span class="pri">{{ite.pri}}</span>起
+                	</p>
+                </div>
+                <span class="num">{{ite.num}}</span>
+            </li>
+            <div class="wating-tip" id="wating-tip">
+            	<div class="none">
+            		<img src="../img/find_image_fail to load@2x (2).png" class="img-responsive"/>
+            		<span>没有了呦，</span></br>
+            		<span>人家是有底线的呢</span>
+            	</div>
+            </div>
+        </ul>
+        <script type="text/javascript" src="../js/vue.js"></script>
+        <script type="text/javascript" src="../js/upmore.js"></script>
+	</div>
+</body>
+</html>

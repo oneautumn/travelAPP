@@ -1,0 +1,39 @@
+{   
+    "uid":25146,
+    "tnum":3,
+    "pnum":1,
+    "codeComment":"0", 
+	"code":"200",
+	"data":{
+		"items":[{
+			"img":"../img/find_image_hotel@2x (21).png",
+			"title":"丽江半溪草堂",
+			"pinjia":"1379",
+			"tiji":"17",
+			"local":"位于丽江 古城区",
+			"pri":"￥145",
+			"num":"上月销售量第一",
+			"id":2145
+			},
+			{
+			"img":"../img/find_image_hotel@2x (22).png",
+			"title":"花筑.丽江古城听花堂",
+			"pinjia":"1269",
+			"tiji":"13",
+			"local":"位于丽江 古城区",
+			"pri":"￥990",
+			"num":"上月销售量第二",
+			"id":2163
+			},
+			{
+			"img":"../img/find_image_hotel@2x (23).png",
+			"title":"丽江东河客栈",
+			"pinjia":"1487",
+			"tiji":"17",
+			"local":"位于丽江 古城区",
+			"pri":"￥2416",
+			"num":"上月销售量第三",
+			"id":2185
+			}]
+	}
+}

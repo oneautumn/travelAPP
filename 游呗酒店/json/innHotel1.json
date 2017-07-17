@@ -1,0 +1,40 @@
+{   
+    "uid":25146,
+    "tnum":3,
+    "pnum":1,
+    "codeComment":"0", 
+	"code":"200",
+	"data":{
+		"items":[
+			{
+			"img":"../img/find_image_hotel@2x (24).png",
+			"title":"爱艾尚高级私人客栈",
+			"pinjia":"4349",
+			"tiji":"13",
+			"local":"位于丽江 古城区",
+			"pri":"￥337",
+			"num":"上月销售量第四",
+			"id":2174
+			},
+			{
+			"img":"../img/find_image_hotel@2x (25).png",
+			"title":"平遥游多多客栈",
+			"pinjia":"2109",
+			"tiji":"14",
+			"local":"位于丽江 古城区",
+			"pri":"￥855",
+			"num":"上月销售量第五",
+			"id":2163
+			},
+			{
+			"img":"../img/find_image_hotel@2x (19).png",
+			"title":"杭州良渚君澜度假酒店",
+			"pinjia":"1739",
+			"tiji":"19",
+			"local":"杭州 余杭区",
+			"pri":"￥623",
+			"num":"上月销售量第六",
+			"id":9645
+			}]
+	}
+}

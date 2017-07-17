@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>客栈</title>
+    <meta name="Generator" content="Sublime Text3">
+    <meta name="Author" content="中山卉子">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1.0, minimum-scale=1.0,user-scalsble=no">
+    <link rel="stylesheet" type="text/css" href="../css/topCom.css">
+    <link rel="stylesheet" type="text/css" href="../css/scenicHotel.css">
+    <script type="text/javascript" src="../js/jquery-3.1.1.min.js"></script>
+    <script type="text/javascript" src="../js/yCom.js"></script>
+</head>
+<body>
+	<div class="y_Box">
+    	<!-- 顶部标题开始 -->
+	    <div class="y_top">
+	      <a href="" id="back">
+	    	<div class="y_back"><span class="arrow"></span><span class="arrow green"></span></div></a>客栈民宿
+	    </div><!-- 顶部标题结束 -->
+        <!-- 展示部分开始 -->
+        <ul id="app">
+            <li v-for="ite in data_Arry.items">
+                <a href="#"><img v-bind:src="ite.img" class="left"></a>
+                <h1>{{ite.title}}</h1>
+                <p class="pinjia">
+                    <span>{{ite.pinjia}}</span>评价,
+                    <span>{{ite.tiji}}</span>游记提及
+                </p>
+                <p class="addr">{{ite.local}}<span class="pri">{{ite.pri}}</span><span class="qi">起</span></p>
+                <span class="num">{{ite.num}}</span>
+            </li>
+            <div class="wating-tip" id="wating-tip">正在加载更多信息...请稍后</div>
+            <!-- <div class="footer">
+                没有了呦！
+            </div> -->
+        </ul>
+        <script type="text/javascript" src="../js/vue.js"></script>
+        <script type="text/javascript">
+           var $watingTip = $("#wating-tip");
+           var addarray=[];
+           var json={};
+           var vue = new Vue({
+            el:"#app",
+            data:function() 
+            {
+                return {
+                    data_Arry:[]
+                } 
+            },
+            created:function()
+            {   
+                var that = this;
+                var page = 0;
+                getJSONandRender(page);
+                function getJSONandRender(page)
+                {
+                    $watingTip.show();
+                    $.get("../json/innHotel"+page+".json",function(data){
+                        data=JSON.parse(data);
+                        var dataArry = [];
+                        dataArry = data.data.items;
+                        console.log(page);
+                        console.log(dataArry); 
+                        that.data_Arry =data.data;
+                        console.log( that.data_Arry)
+                        if(page>=0){
+                             addarray=addarray.concat(dataArry);
+                             json.items=addarray;
+                             console.log(json.items);
+                            that.data_Arry=json;
+
+                        }
+//                      var timer =null;
+                        if (data.code==0) 
+                            {
+                                // $watingTip.html("没有了呦");
+                                // $("#wating-tip").slideUp("normal");
+                                // timer = setInterval(function(){
+                                    // $("#wating-tip").slideUp("normal");
+                                // },200)
+                                return;
+
+                                // console.log("xx");
+
+
+                            };
+                    lock = true;
+                    $watingTip.hide();
+                    })
+                }
+                var lock = true;
+                $(window).scroll(function(){
+                    if (!lock)  {return};
+                    var rate = $(window).scrollTop()/($(document).height()-$(window).height());
+                    if (rate>=0.5) 
+                        {
+                            page++;
+                            getJSONandRender(page);
+                            lock = false;
+                        };
+                })
+            }
+           })
+         
+        </script>
+	</div>
+</body>
+</html>
